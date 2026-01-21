@@ -86,7 +86,7 @@ Click the **Create VPC** button to begin the VPC creation wizard. The wizard gui
 
 #### 1.4 - Create a VPC with the following settings
 
-In the creation form, provide the basic settings for this lab. Typical values used in the lab are:
+Select **VPC and more** to use the wizard that creates all related resources automatically. In the creation form, provide the basic settings for this lab. Typical values used in the lab are:
 
 - **Name tag**: Choose a name appropriate for your team
 - **IPv4 CIDR block**: Choose a /24 CIDR, and ensure this does not overlap with your partner's VPC!
@@ -181,10 +181,9 @@ Use the script found in `scripts/bootstrap-nginx.sh`. Copy and paste its content
 3. Start the NGINX service so it begins accepting HTTP requests immediately.
 4. Configure NGINX to automatically start on every system boot.
 5. Retrieve the EC2 instance ID from the Instance Metadata Service (IMDS). This ID will be useful later in Part 3 to verify load balancing across multiple instances.
-6. Create an HTML file that displays a welcome message along with the instance ID.
-7. Place the HTML file in the standard NGINX document root so it is accessible via a browser.
-8. Restart the NGINX service to ensure the newly created web page is loaded and served.
-9. Check the current status of the NGINX service to confirm it is running successfully.
+6. Create an HTML file that displays a welcome message along with the instance ID and place it in the standard NGINX document root so it is accessible via a browser.
+7. Restart the NGINX service to ensure the newly created web page is loaded and served.
+8. Check the current status of the NGINX service to confirm it is running successfully.
 
 ![2.9a - Run the commands from bootstrap-nginx.sh to configure your nginx web server on the EC2](img/2.9-run-bootstrap-nginx-commands.png)
 
@@ -363,10 +362,11 @@ Clone this repository to your local machine. In the `/infra` folder you will fin
 
 ```
 infra/
-├── main.tf        # Main resource definitions (VPC already provided)
-├── providers.tf   # Terraform and AWS provider configuration
-├── variables.tf   # Input variable definitions
-└── outputs.tf     # Output value definitions
+├── main.tf           # Main resource definitions (VPC already provided)
+├── providers.tf      # Terraform and AWS provider configuration
+├── variables.tf      # Input variable definitions
+├── terraform.tfvars  # Variable values for your project
+└── outputs.tf        # Output value definitions
 ```
 
 The VPC resource is already defined in `main.tf` as a starting point. You will extend this to include the remaining resources.
