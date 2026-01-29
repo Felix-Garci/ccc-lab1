@@ -4,6 +4,7 @@
 
 # Terraform directory
 infra/.terraform/
+infra_2/.terraform/
 
 # Crash log files
 crash.log
@@ -20,3 +21,7 @@ override.tf.json
 terraform.rc
 
 .DS_Store
+
+# Claves AWS
+credentials
+vockey.pem

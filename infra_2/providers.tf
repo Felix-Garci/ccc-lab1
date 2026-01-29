@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.14"
   backend "s3" {
     bucket = "tf-state-899311789148-us-east-1"
-    key   = "lab1/terraform.tfstate"
+    key   = "lab1_2/terraform.tfstate"
     region = "us-east-1"
     use_lockfile = true 
     shared_credentials_files = ["./credentials"]

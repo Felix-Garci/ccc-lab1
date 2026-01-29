@@ -21,20 +21,3 @@ variable "availability_zone" {
   default     = "us-east-1a"
 }
 
-variable "peer_owner_id" {
-  description = "ID de cuenta de AWS del compañero (Account ID)"
-  type        = string
-  default     = "" 
-}
-
-variable "peer_vpc_id" {
-  description = "VPC ID del compañero"
-  type        = string
-  default     = "" 
-}
-
-variable "peer_cidr_block" {
-  description = "CIDR block de la VPC del compañero (ej. 10.0.1.0/24)"
-  type        = string
-  default     = ""
-}
